@@ -1,0 +1,355 @@
+/* Estilos compartidos de Como en casa */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Rubik", Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #3b2b20;
+  background-color: #b99c79;
+  background-image: url("fondo-cocina.png");
+  background-repeat: repeat;
+  background-size: 370px 370px;
+  letter-spacing: .02em;
+  word-spacing: .08em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, serif;
+  line-height: 1.2;
+  letter-spacing: .01em;
+}
+
+h1 { font-weight: 800; }
+h2 { font-weight: 700; }
+h3, h4 { font-weight: 600; }
+h5, h6 { font-weight: 500; }
+
+.banner {
+  padding: 0;
+  line-height: 0;
+  background-color: #C9A27E;
+}
+
+.imagen-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center 48%;
+}
+
+.navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .65rem;
+  padding: 1rem;
+  background-color: #A47148;
+}
+
+.navegacion-bs {
+  background-color: #A47148;
+}
+
+.navegacion-bs .navbar-brand,
+.navegacion-bs .nav-link {
+  color: #fffaf5;
+  font-weight: 600;
+}
+
+.navegacion-bs .nav-link:hover,
+.navegacion-bs .nav-link:focus,
+.navegacion-bs .nav-link.active {
+  color: #F1E8D9;
+}
+
+.boton-nav {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .55rem 1.1rem;
+  border: 2px solid #fffaf5;
+  border-radius: 999px;
+  color: #fffaf5;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.boton-nav:hover,
+.boton-nav:focus-visible,
+.boton-nav[aria-current="page"] {
+  background-color: #fffaf5;
+  color: #68472f;
+}
+
+main {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+section,
+article {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+/* Secciones violetas: deja una sección con la clase seccion-especial para la excepción. */
+.seccion-violeta {
+  background-color: #E299E2;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+.seccion-especial {
+  background-color: rgba(237, 224, 212, 0.94);
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Alineación, sangría y separación del texto de lectura. */
+p {
+  text-align: justify;
+  text-indent: 1.2em;
+  letter-spacing: .025em;
+  word-spacing: .1em;
+  line-height: 1.85;
+  font-weight: 400;
+}
+
+/* Todos los párrafos tienen id y reciben el mismo color. */
+p[id] {
+  color: #6A994E;
+}
+
+footer p {
+  text-align: center;
+  text-indent: 0;
+}
+
+strong { font-weight: 700; }
+
+.titulo-azul { color: #1769aa; }
+.categoria-proximamente h2 { margin-top: 0; }
+
+.receta {
+  padding: clamp(1.2rem, 4vw, 2.4rem);
+}
+
+.encabezado-receta {
+  margin: 0 0 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #b99c83;
+}
+
+.encabezado-receta h2 {
+  margin: .1rem 0 .5rem;
+  color: #68472f;
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+.encabezado-receta p { margin-bottom: 0; }
+
+.etiqueta {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  vertical-align: middle;
+}
+
+.receta section { margin: 1.5rem 0; }
+.receta h3 { color: #68472f; }
+.receta li { margin-bottom: .65rem; }
+.receta li ul { margin-top: .6rem; }
+
+.video-receta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #b99c83;
+}
+
+a { color: #1769aa; }
+a:hover { color: #0d4774; }
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #c62828;
+}
+
+/* Cuatro tarjetas de recetas con los colores elegidos para cada comida. */
+.seccion-comidas > p { margin-bottom: 1.25rem; }
+
+.rejilla-cajas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.caja-color {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 190px;
+  padding: 1rem;
+  overflow: auto;
+  border: 2px solid rgba(59, 43, 32, .35);
+  border-radius: 10px;
+}
+
+.contenido-caja {
+  width: 440px;
+  min-width: 440px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contenido-caja h3 {
+  margin: 0 0 .5rem;
+  color: #3b2b20;
+  font-size: 1.05rem;
+}
+
+.imagen-tarjeta {
+  display: block;
+  width: 420px;
+  height: 165px;
+  margin-bottom: .75rem;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.contenido-caja p { width: 420px; }
+.caja-hex { background-color: #F1E8D9; }
+.caja-rgb { background-color: #E6D5BE; }
+.caja-rgba { background-color: #D8C3A5; }
+.caja-nombre { background-color: #C7B299; }
+
+.imagen-destacada {
+  display: block;
+  width: 100%;
+  max-height: 380px;
+  margin: 1rem 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.contenedor-tabla {
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.contenedor-tabla table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  background-color: rgba(241, 232, 217, .94);
+}
+
+.contenedor-tabla caption {
+  padding: .75rem;
+  color: #3b2b20;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.contenedor-tabla th,
+.contenedor-tabla td {
+  padding: .8rem;
+  border: 1px solid rgba(59, 43, 32, .25);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.contenedor-tabla thead th {
+  background-color: #C7B299;
+  color: #3b2b20;
+  font-weight: 700;
+}
+
+.contenedor-tabla tbody tr:nth-child(even) {
+  background-color: rgba(216, 195, 165, .45);
+}
+
+.seccion-tabla p { margin-bottom: 1rem; }
+
+.bloque-bootstrap .card {
+  overflow: hidden;
+  border: 1px solid rgba(104, 71, 47, .2);
+  background-color: #fffaf5;
+}
+
+.bloque-bootstrap .card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+.bloque-bootstrap .card-title {
+  color: #68472f;
+}
+
+.bloque-bootstrap .card-footer {
+  background-color: #F1E8D9;
+}
+
+.bloque-bootstrap .tab-content {
+  min-height: 100px;
+}
+
+.bloque-bootstrap .carousel-inner {
+  background-color: #3b2b20;
+}
+
+.bloque-bootstrap .imagen-carrusel {
+  height: 420px;
+  object-fit: cover;
+  opacity: .82;
+}
+
+.bloque-bootstrap .carousel-caption {
+  right: 12%;
+  left: 12%;
+  bottom: 1.5rem;
+  padding: .8rem 1rem;
+  border-radius: .75rem;
+  background-color: rgba(30, 25, 21, .72);
+  color: #fffaf5;
+}
+
+.bloque-bootstrap .carousel-caption h3,
+.bloque-bootstrap .carousel-caption p {
+  margin-bottom: .25rem;
+  color: #fffaf5;
+  text-align: center;
+  text-indent: 0;
+}
+
+.paginacion-recetas .page-link {
+  color: #68472f;
+}
+
+.paginacion-recetas .page-item.active .page-link {
+  border-color: #A47148;
+  background-color: #A47148;
+  color: #fffaf5;
+}
+
+@media (max-width: 600px) {
+  main { padding: .6rem; }
+  section, article { padding: 1rem; }
+  .navegacion { gap: .45rem; }
+  .boton-nav { padding: .5rem .85rem; }
+  .rejilla-cajas { grid-template-columns: 1fr; }
+  .bloque-bootstrap .imagen-carrusel { height: 280px; }
+  .bloque-bootstrap .carousel-caption { right: 8%; left: 8%; bottom: .5rem; }
+}
